@@ -12,7 +12,7 @@
                 <h5 class = "fw-light">Links</h5>
                 <ul class = "list-unstyled">
                     <li class = "my-3">
-                        <a href = "#" class = "text-white text-decoration-none text-muted">
+                        <a href = "/" class = "text-white text-decoration-none text-muted">
                             <i class = "fas fa-chevron-right me-1"></i> Home
                         </a>
                     </li>
@@ -22,12 +22,12 @@
                         </a>
                     </li>
                     <li class = "my-3">
-                        <a href = "#category" class = "text-white text-decoration-none text-muted">
+                        <a href = "/category" class = "text-white text-decoration-none text-muted">
                             <i class = "fas fa-chevron-right me-1"></i> Category
                         </a>
                     </li>
                     <li class = "my-3">
-                        <a href = "#about" class = "text-white text-decoration-none text-muted">
+                        <a href = "/about" class = "text-white text-decoration-none text-muted">
                             <i class = "fas fa-chevron-right me-1"></i> About Us
                         </a>
                     </li>
