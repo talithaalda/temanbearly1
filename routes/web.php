@@ -60,7 +60,7 @@ Route::get('/category', function () {
 Route::get('/produk', [produkController::class,'index']);
 Route::get('produk/{produk:slug}',[produkController::class,'show']);
 Route::get('/category/{category:slug}',function(category $category){
-    return view('Kategori',[
+    return view('kategori',[
         'title'=>'Category',
         "active"=>'kategori',
         "kategori"=>$category,
