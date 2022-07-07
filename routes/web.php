@@ -18,7 +18,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardOrderController;
 use App\Http\Controllers\DashboardProdukController;
 use App\Http\Controllers\DashboardCategoryController;
-use App\Http\Controllers\OrderhistoryController;
+use App\Http\Controllers\OrderHistoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -142,7 +142,7 @@ Route::group(['middleware'=>['auth','ceklevel:User']],function(){
             "city"=>City::all()
         ]);
     });
-    Route::resource('/orderhistory', OrderhistoryController::class);
+    Route::resource('/orderhistory', OrderHistoryController::class);
     Route::post('/profile/{User:id}',[RegisterController::class,'update']);
     Route::resource('/cart', CartController::class);
     Route::delete('/cart',[CartController::class,'destroyAll']);
