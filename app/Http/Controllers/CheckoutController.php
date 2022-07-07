@@ -10,6 +10,7 @@ use App\Http\Requests\UpdatecheckoutRequest;
 use App\Models\City;
 use App\Models\Courier;
 use App\Models\Order;
+use Illuminate\Auth\Events\Validated;
 use Illuminate\Support\Facades\Storage;
 // use Kavist\RajaOngkir\Facades\RajaOngkir;
 
@@ -61,17 +62,18 @@ class CheckoutController extends Controller
      */
     public function store(StorecheckoutRequest $request)
     {
+        date_default_timezone_set('Asia/Jakarta');
         $validatedData = $request->validate([
             'user_id' => 'required',
             'methodpay'=> 'required',
             'total'=> 'required',
             'total_item'=>'required',
-            // 'ongkir'=>'required',
             'status'=>'required'
         ]);
         if(str_contains($validatedData['total'], ".")){
             $validatedData['total']=str_replace(".", "", $validatedData['total']);;
         }
+        $validatedData['date_order'] = date('Y-m-d H:i:s');
         // if(str_contains($validatedData['ongkir'], ".")){
         //     $validatedData['ongkir']=str_replace(".", "", $validatedData['ongkir']);;
         // }

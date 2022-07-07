@@ -122,6 +122,7 @@
                 <input name="status" type="hidden" value= "Waiting for payment">
                 <input name="user_id" type="hidden" value= "{{ auth()->user()->id }}">
                 <input name="total" type="hidden" value= "{{ $total }}">
+                <input name="date_order" type="hidden" value= "">
                 {{-- <input name="ongkir" type="hidden" value= "{{ $ongkir }}"> --}}
                 <input name="total_item" type="hidden" value= "{{ $total_item }}">
                 <input name="checkout_id" type="hidden" >
