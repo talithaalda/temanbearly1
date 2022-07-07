@@ -31,7 +31,7 @@
                             <span class = "text-primary"><i class = "fas fa-star"></i></span>
                         </div>
                         <p class = "text-capitalize my-1">{{ $p->namaproduk }}</p>
-                        <span class = "fw-bold">Price : Rp {{ $p->harga }}</span> 
+                        <span class = "fw-bold">Price : Rp {{ number_format($p->harga, 0, ".", ".")  }}</span> 
                         <div class="link text-center">
                             <a href = "/produk/{{ $p->slug }}" class = "btn btn-primary mt-3">Add to Cart</a>
                   </div>
