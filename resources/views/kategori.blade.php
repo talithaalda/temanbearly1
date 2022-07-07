@@ -17,7 +17,7 @@
                     
                         @if($p::find($i)!=null)
                             @if($p->namaproduk==$p::find($i)->namaproduk)
-                                <img src="{{asset("img/$p->namaproduk.jpg")}}"  width="300" height="300">
+                                <img src="{{asset("storage/$p->image")}}"  width="300" height="300">
                             @endif
                         @endif
                     @endfor
