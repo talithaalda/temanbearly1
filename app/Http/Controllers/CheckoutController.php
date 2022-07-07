@@ -88,6 +88,7 @@ class CheckoutController extends Controller
             'quantity'=>'nullable',
         ]);
         $validatedData1['checkout_id']=$coID;
+        $validatedData1['date_order'] = date('Y-m-d H:i:s');
         $co_id=$validatedData1['checkout_id'];
         foreach(auth()->user()->cart as $c){
             $validatedData1['produk_id'] = $c->produk_id;
