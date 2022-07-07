@@ -37,7 +37,7 @@
                                             We cannot simply send you your old password. To reset your password, click the
                                             following link and follow the instructions.
                                         </p>
-                                        <a href="http://localhost:8000/{{$token}}/reset-password"
+                                        <a href="http://temanbearly-app.test/{{$token}}/reset-password"
                                             style="background:hsl(337, 100%, 51%);text-decoration:none !important; font-weight:500; margin-top:35px; color:#fff;text-transform:uppercase; font-size:14px;padding:10px 24px;display:inline-block;border-radius:50px;">Reset
                                             Password</a>
                                     </td>
