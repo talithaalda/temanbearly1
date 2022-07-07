@@ -8,13 +8,14 @@
             <div class="card shadow-lg ">
                 <div class="text-center mt-5">
                     <h1 >THANK YOU FOR YOUR ORDER!</h1>
-                    <h6 class="mt-5" style="margin-left: 200px; margin-right:200px" >Your order will be processed immediately. 
+                    <h6 class="mt-5">Your order will be processed immediately. 
                         <br>For more information, please go to the order history menu. </h6>
                     
-                <br>
+                        <br>
                 <a  href="/orderhistory" class="btn btn-primary mb-5 mt-5" >Order History</a>  
                 <a href="/" class="btn btn-primary mb-5 mt-5 border-0" style="background-color: #e5345b; color:white;" >Back to home</a> 
                 <br><br>
+                </div>
             </div>
         </div>
     </div>
