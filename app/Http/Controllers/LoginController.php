@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Validation\ValidationException;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -10,6 +11,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Redirect;
 
 class LoginController extends Controller
 {
@@ -35,29 +37,29 @@ class LoginController extends Controller
             'level' => 'required'
         ]);
 
-        if (Auth::attempt($credentials)) {
-            $user = Auth::user();
+        $user = User::where('email', $credentials['email'])->first();
 
-            if ($credentials['level'] == 'Admin') {
-                $token = $user->createToken('authToken')->plainTextToken;
-
-                // return response()->json(['token' => $token, 'redirect' => '/dashboard']);
-                return redirect()->intended('/dashboard');
-            } else {
-                $token = $user->createToken('authToken')->plainTextToken;
-
-                // return response()->json(['token' => $token, 'redirect' => '/']);
-                return redirect()->intended('/');
-            }
+        if (!$user || !Hash::check($credentials['password'], $user->password)) {
+            throw ValidationException::withMessages([
+                'email' => ['The provided credentials are incorrect.'],
+            ]);
         }
 
-        return back()->with('loginError', 'Login Failed');
+        $token = $user->createToken('authToken')->plainTextToken;
+        if (Auth::attempt($credentials)) {
+            if ($credentials['level'] == 'Admin') {
+                return Redirect::intended('/dashboard')->with('token', $token);
+            } else {
+                return Redirect::intended('/')->with('token', $token);
+            }
+        } else {
+            return back()->with('loginError', 'Login Failed');
+        }
     }
     public function logout(Request $request)
     {
+        $request->user()->tokens()->delete();
         Auth::logout();
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
         return redirect('/');
     }
 

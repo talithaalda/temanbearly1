@@ -91,7 +91,7 @@ Route::get('/{token}/reset-password', function ($token) {
     ]);
 });
 Route::post('/resetpassword/{User:id}', [LoginController::class, 'reset']);
-Route::post('/register', [RegisterController::class, 'store']);
+Route::put('/register', [RegisterController::class, 'store']);
 Route::post('/login', [LoginController::class, 'authenticate']);
 
 
