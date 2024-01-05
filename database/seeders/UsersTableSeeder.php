@@ -15,18 +15,18 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         User::create([
-            'name'=>'Talitha Alda',
-            'username'=>'talithaalda',
-            'email'=>'talithaalda@gmail.com',
-            'level'=>'User',
-            'password'=>bcrypt('12345'),
+            'name' => 'Talitha Alda',
+            'username' => 'talithaalda',
+            'email' => 'talithaalda@gmail.com',
+            'level' => 'User',
+            'password' => bcrypt('12345'),
         ]);
         User::create([
-            'name'=>'Admin',
-            'username'=>'admin',
-            'email'=>'admin@admin.com',
-            'level'=>'Admin',
-            'password'=>bcrypt('12345'),
+            'name' => 'Admin',
+            'username' => 'admin',
+            'email' => 'admin@gmail.com',
+            'level' => 'Admin',
+            'password' => bcrypt('admin'),
         ]);
     }
 }

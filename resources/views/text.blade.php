@@ -12,7 +12,7 @@
 		  {{ session('success') }}
 		</div>
 	@endif
-        
+
 <br>
 <form method="post" action="/cart" enctype="multipart/form-data">
     @csrf
@@ -52,7 +52,7 @@
                     <p class="product-description">{!! $produk->deskripsi !!}</p>
                     <input name="harga" type="hidden" value= "{{ $produk->harga }}">
                     <h4 class="price">Rp <span> {{ number_format($produk->harga, 0, ".", ".")  }}</span></h4>
-                    
+
                     <div class="row">
                         <div class="col-md-3">
                             <p>Select Quantity :</p>
@@ -79,10 +79,11 @@
                         @else
                             <button type="submit" class="text-white border-0 btn btn-primary mt-4" style=" background-color: #e5345b;">Add to Cart</button>
                         @endif
-                        <div class="py-3 mt-5 addtocart">
+
+                    </div>
+                    <div class="py-3 mt-5">
                             <a href="/produk" class = "btn btn-primary mt-4">Back to Produk </a>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -91,27 +92,27 @@
 </form>
 
 <style>
-@media (max-width: 576px) { 
+@media (max-width: 576px) {
     .addtocart{
     position: relative;
     left: 170px;
     }
-    
+
 }
-@media (min-width: 576px) { 
+@media (min-width: 576px) {
     .addtocart{
     position: relative;
     left: 270px;
     }
-    
+
 }
-@media (min-width: 1024px) { 
+@media (min-width: 1024px) {
     .addtocart{
     text-align: center
     }
     .back{
         float:right;
     }
-}   
+}
 </style>
 @endsection

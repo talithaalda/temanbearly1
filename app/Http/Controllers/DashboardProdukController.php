@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use \Cviebrock\EloquentSluggable\Services\SlugService;
 use App\Models\produk;
 use App\Models\category;
@@ -16,15 +17,17 @@ class DashboardProdukController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(){
+    public function index()
+    {
         return view('dashboard.produk.index', [
-            "produk" => produk::all ()
+            "produk" => produk::all()
         ]);
     }
-    
-    public function show(produk $produk){
-        return view('dashboard.produk.show',[
-            "produk" => $produk
+
+    public function show(produk $product)
+    {
+        return view('dashboard.produk.show', [
+            "produk" => $product
         ]);
     }
     /**
@@ -34,9 +37,9 @@ class DashboardProdukController extends Controller
      */
     public function create()
     {
-        return view('dashboard.produk.create',[
-            'category'=>category::all(),
-            'produk'=>produk::all()
+        return view('dashboard.produk.create', [
+            'category' => category::all(),
+            'produk' => produk::all()
         ]);
     }
 
@@ -48,26 +51,25 @@ class DashboardProdukController extends Controller
      */
     public function store(Request $request)
     {
-       
+
         $validatedData = $request->validate([
             'namaproduk' => 'required|max:255',
             'slug' => 'required',
-            'category_id'=> 'required',
-            'merk'=> 'required',
-            'harga'=> 'required',
-            'deskripsi'=> 'required',
-            'stok'=> 'required',
-            'image'=>'image'
+            'category_id' => 'required',
+            'merk' => 'required',
+            'harga' => 'required',
+            'deskripsi' => 'required',
+            'stok' => 'required',
+            'image' => 'image'
         ]);
-        if(str_contains($validatedData['harga'], ".")){
-            $validatedData['harga']=str_replace(".", "", $validatedData['harga']);
+        if (str_contains($validatedData['harga'], ".")) {
+            $validatedData['harga'] = str_replace(".", "", $validatedData['harga']);
         }
-        if($request->file('image')){
-            $validatedData['image']=$request->file('image')->store('produk-image');
+        if ($request->file('image')) {
+            $validatedData['image'] = $request->file('image')->store('produk-image');
         }
         produk::create($validatedData);
-        return redirect("/dashboard/products/")->with('success','Product has been created');
-
+        return redirect("/dashboard/products/")->with('success', 'Product has been created');
     }
 
     /**
@@ -83,11 +85,11 @@ class DashboardProdukController extends Controller
      * @param  \App\Models\produk  $produk
      * @return \Illuminate\Http\Response
      */
-    public function edit(produk $produk)
+    public function edit(produk $product)
     {
-        return view('dashboard.produk.edit',[
-            'category'=>category::all(),
-            "produk"=>$produk
+        return view('dashboard.produk.edit', [
+            'category' => category::all(),
+            "produk" => $product
         ]);
     }
 
@@ -103,24 +105,24 @@ class DashboardProdukController extends Controller
         $validatedData = $request->validate([
             'namaproduk' => 'required|max:255',
             'slug' => 'required',
-            'category_id'=> 'required',
-            'merk'=> 'required',
-            'harga'=> 'required',
-            'deskripsi'=> 'required',
-            'stok'=> 'required',
-            'image'=>'image'
+            'category_id' => 'required',
+            'merk' => 'required',
+            'harga' => 'required',
+            'deskripsi' => 'required',
+            'stok' => 'required',
+            'image' => 'image'
         ]);
-        if(str_contains($validatedData['harga'], ".")){
-            $validatedData['harga']=str_replace(".", "", $validatedData['harga']);;
+        if (str_contains($validatedData['harga'], ".")) {
+            $validatedData['harga'] = str_replace(".", "", $validatedData['harga']);;
         }
-        if($request->file('image')){
-            if($request->oldImage){
+        if ($request->file('image')) {
+            if ($request->oldImage) {
                 Storage::delete($request->oldImage);
             }
-            $validatedData['image']=$request->file('image')->store('produk-image');
+            $validatedData['image'] = $request->file('image')->store('produk-image');
         }
         produk::where('id', $id)->update($validatedData);
-        return redirect("/dashboard/products/edit/$request->slug")->with('success','Product has been updated');
+        return redirect("/dashboard/products/$request->slug/edit")->with('success', 'Product has been updated');
     }
 
     /**
@@ -129,19 +131,18 @@ class DashboardProdukController extends Controller
      * @param  \App\Models\produk  $produk
      * @return \Illuminate\Http\Response
      */
-    public function destroy(produk $produk)
+    public function destroy(produk $product)
     {
-        if($produk->image){
-            Storage::delete($produk->image);
+        if ($product->image) {
+            Storage::delete($product->image);
         }
-        produk::destroy($produk->id);
-        return redirect("/dashboard/products")->with('success','Product has been delete');
+        produk::destroy($product->id);
+        return redirect("/dashboard/products")->with('success', 'Product has been delete');
     }
-    
+
     public function checkSlug(Request $request)
     {
         $slug = SlugService::createSlug(produk::class, 'slug', $request->namaproduk);
-        return response()->json(['slug'=>$slug]);
+        return response()->json(['slug' => $slug]);
     }
-    
 }

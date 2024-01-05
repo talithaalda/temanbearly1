@@ -2,13 +2,14 @@
 <footer class = "bg-dark py-5">
     <div class = "container">
         <div class = "row text-white g-4">
-            <div class = "col-md-6 col-lg-3">
+            <div class = "col-md-6 col-lg-4">
                 <a class = "text-uppercase text-decoration-none brand text-white" href = "index.html">About</a>
-                <p class = "text-white text-muted mt-3">Teman Bearly Beauty merupakan online shop yang menjual berbagai macam skincare,
-                     makeup, parfum, dan aksesoris dari berbagai brand lokal maupun internasional</p>
+                <p class = "text-white text-muted mt-3">Teman Bearly Beauty merupakan online shop yang menjual berbagai
+                    macam skincare,
+                    makeup, parfum, dan aksesoris dari berbagai brand lokal maupun internasional</p>
             </div>
 
-            <div class = "col-md-6 col-lg-3">
+            <div class = "col-md-6 col-lg-2 ps-5">
                 <h5 class = "fw-light">Links</h5>
                 <ul class = "list-unstyled">
                     <li class = "my-3">
@@ -67,23 +68,27 @@
                 <div>
                     <ul class = "list-unstyled d-flex">
                         <li>
-                            <a href = "https://api.whatsapp.com/send/?phone=6285156340246&text&app_absent=0" class = "text-white text-decoration-none text-muted fs-4 me-4">
-                                <img src="https://img.icons8.com/material-outlined/27/969EA5/whatsapp--v1.png"/>
+                            <a href = "https://api.whatsapp.com/send/?phone=6285156340246&text&app_absent=0"
+                                class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                <img src="https://img.icons8.com/material-outlined/27/969EA5/whatsapp--v1.png" />
                             </a>
                         </li>
                         <li>
-                            <a href = "https://www.instagram.com/temanbearly.beauty/" class = "text-white text-decoration-none text-muted fs-4 me-4">
-                                <img src="https://img.icons8.com/material-outlined/30/969EA5/instagram-new--v1.png"/>
+                            <a href = "https://www.instagram.com/temanbearly.beauty/"
+                                class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                <img src="https://img.icons8.com/material-outlined/30/969EA5/instagram-new--v1.png" />
                             </a>
                         </li>
                         <li>
-                            <a href = "https://shopee.co.id/temanbearly.beauty" class = "text-white text-decoration-none text-muted fs-4 me-4">
-                                <img src="https://img.icons8.com/fluency-systems-filled/27/969EA5/shopee.png"/>
+                            <a href = "https://shopee.co.id/temanbearly.beauty"
+                                class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                <img src="https://img.icons8.com/fluency-systems-filled/27/969EA5/shopee.png" />
                             </a>
                         </li>
                         <li>
-                            <a href = "https://www.tokopedia.com/tbearly?source=universe&st=product" class = "text-white text-decoration-none text-muted fs-4 me-4">
-                                <img src="{{ asset("img/tokopedia.png") }}" alt="" width="45px">
+                            <a href = "https://www.tokopedia.com/tbearly?source=universe&st=product"
+                                class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                <img src="{{ asset('img/tokopedia.png') }}" alt="" width="45px">
                             </a>
                         </li>
                     </ul>

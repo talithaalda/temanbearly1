@@ -5,12 +5,12 @@
 </div>
 
   @if(session()->has('success'))
-  <div class="alert alert-success col-lg-8" role="alert">
+  <div class="alert alert-success col-lg-12" role="alert">
     {{ session('success') }}
   </div>
 
   @endif
-  <div class="table-responsive col-lg-8">
+  <div class="table-responsive col-lg-12">
     <a href="/dashboard/products/create" class="btn btn-primary mb-3">Create New Product</a>
     <table class="table table-striped table-sm">
       <thead>
@@ -33,10 +33,8 @@
           <td>{{ $p->category->namakategori }}</td>
           <td>{{ $p->stok }}</td>
           <td>
-            <a href="/dashboard/products/show/{{ $p->slug }}" class="badge bg-info"><span data-feather="eye"></span></a>
-          
-            <a href="/dashboard/products/edit/{{ $p->slug }}" class="badge bg-warning"><span data-feather="edit"></span></a>
-          
+            <a href="/dashboard/products/{{ $p->slug }}" class="badge bg-info"><span data-feather="eye"></span></a>
+            <a href="/dashboard/products/{{ $p->slug }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
             <form action="/dashboard/products/{{ $p->slug }}/" method="post" class="d-inline">
                 @method('delete')
                 @csrf

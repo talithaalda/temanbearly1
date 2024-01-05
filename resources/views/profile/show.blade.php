@@ -10,9 +10,9 @@
 @endif
 <div class="row">
     <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12 ">
-            <br><br>      
-            <div class="rectangle">                
-            <h5>hello {{ auth()->user()->name }}!</h5>        
+            <br><br>
+            <div class="rectangle">
+            <h5>hello {{ auth()->user()->name }}!</h5>
             <div>
                 <ul>
                     <ul>
@@ -34,38 +34,38 @@
                         <div class="form-group ">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" name="name" required autofocus value="{{ old('name',auth()->user()->name) }}"> 
+                                <input type="text" class="form-control" name="name" required autofocus value="{{ old('name',auth()->user()->name) }}">
                             </div>
                         </div>
                         <div class="form-group ">
                             <div class="mb-3">
                                 <label for="username" class="form-label">Username</label>
-                                <input type="text" class="form-control" name="username" required autofocus value="{{ old('name',auth()->user()->username) }}"> 
+                                <input type="text" class="form-control" name="username" required autofocus value="{{ old('name',auth()->user()->username) }}">
                             </div>
                         </div>
                         <div class="form-group ">
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="text" class="form-control" name="email" required autofocus value="{{ old('email',auth()->user()->email) }}"> 
+                                <input type="text" class="form-control" name="email" required autofocus value="{{ old('email',auth()->user()->email) }}">
                             </div>
                         </div>
                         <input name="password" type="hidden" value= "{{ auth()->user()->password }}">
-                        <div class="form-group ">
+                        {{-- <div class="form-group ">
                             <div class="mb-3">
                                 <label for="password">Change Password</label>
-                                <input type="password" class="form-control" name="new_password" placeholder="Password" id="password"  > 
+                                <input type="password" class="form-control" name="new_password" placeholder="Password" id="password"  >
                             </div>
                         </div>
                         <div class="form-group ">
                             <div class="mb-3">
                                 <label for="password">Confirm Password</label>
-                                <input type="password" class="form-control" name="confirm_new_password" placeholder="Confirm Password" id="confirm_password"> 
+                                <input type="password" class="form-control" name="confirm_new_password" placeholder="Confirm Password" id="confirm_password">
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="form-group ">
                             <div class="mb-3">
                                 <label for="phone" class="form-label">Phone</label>
-                                <input type="text" class="form-control" name="phone" required autofocus value="{{ old('phone',auth()->user()->phone) }}"> 
+                                <input type="text" class="form-control" name="phone" required autofocus value="{{ old('phone',auth()->user()->phone) }}">
                             </div>
                         </div>
                               </div>
@@ -74,7 +74,7 @@
                                     <div class="mb-3">
                                         <label for="address" class="form-label">Address</label>
                                         <textarea  rows="4" cols="50" class="input_text form-control" name="address" >{{ auth()->user()->address }}</textarea>
-                                    </td> 
+                                    </td>
                                     </div>
                                 </div>
                                 <div class="form-group ">
@@ -88,10 +88,10 @@
                                 {{-- <div class="form-group ">
                                     <div class="mb-3">
                                         <label for="province" class="form-label">Province</label>
-                                        <input type="text" class="form-control" name="province" required autofocus value="{{ old('province',auth()->user()->province) }}"> 
+                                        <input type="text" class="form-control" name="province" required autofocus value="{{ old('province',auth()->user()->province) }}">
                                     </div>
                                 </div>
-                                
+
                                 <div class="mb-3">
                                     <label for="city" class="form-label">City</label>
                                     <select class="form-select" name="city">
@@ -100,21 +100,21 @@
                                         <option value="{{ $c->id }}" selected>{{ $c->title }}</option>
                                         @else
                                         <option value="{{ $c->id }}" >{{ $c->title }}</option>
-                                        @endif            
+                                        @endif
                                         @endforeach
                                       </select>
-                            
+
                                 </div>
                                 <div class="form-group ">
                                     <div class="mb-3">
                                         <label for="subdistrict" class="form-label">Sub District</label>
-                                        <input type="text" class="form-control" name="subdistrict" required autofocus value="{{ old('subdistrict',auth()->user()->subdistrict) }}"> 
+                                        <input type="text" class="form-control" name="subdistrict" required autofocus value="{{ old('subdistrict',auth()->user()->subdistrict) }}">
                                     </div>
                                 </div> --}}
                                 <div class="form-group ">
                                     <div class="mb-3">
                                         <label for="Zipcode" class="form-label">Zipcode</label>
-                                        <input type="text" class="form-control" name="zipcode" required autofocus value="{{ old('zipcode',auth()->user()->zipcode) }}"> 
+                                        <input type="text" class="form-control" name="zipcode" required autofocus value="{{ old('zipcode',auth()->user()->zipcode) }}">
                                     </div>
                                 </div>
                             </div>
@@ -124,7 +124,7 @@
                             <div class="text-center mb-3">
                               <button type="submit" name="submit" class="btn btn-success float-right">Save</button>
                             </div>
-                                
+
                         </table>
                     </div>
                 </div>
@@ -158,5 +158,5 @@ function validatePassword(){
 
 password.onchange = validatePassword;
 confirm_password.onkeyup = validatePassword;
-</script>    
+</script>
 @endsection

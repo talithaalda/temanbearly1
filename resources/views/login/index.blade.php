@@ -13,7 +13,7 @@
             {{ session('loginError') }}
         </div>
         @endif
-        
+
     <main class="form-signin">
         <form action="/login" method="post">
         @csrf
@@ -33,7 +33,7 @@
           </div>
           <a style="float:right;" class="mb-3" href="/forgotpassword">Forgot password?</a>
         <button class="w-100 btn-lg btn-primary" type="submit">Login</button>
-        
+
         </form>
         <small class="d-block text-center">Not Registered? <a href="/register">Register Now!</a></small>
     </main>

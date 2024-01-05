@@ -3,7 +3,7 @@
 @section('container')
 <h1>&emsp;</h1>
 <div class="text-center mb-5">
-    <a href="/dashboard/products/edit/{{ $produk->slug }}" class="btn border-0" style="border-radius: 4px;padding: 7px .9em;
+    <a href="/dashboard/products/{{ $produk->slug }}/edit" class="btn border-0" style="border-radius: 4px;padding: 7px .9em;
         background-color: #059b23;color:white"><span data-feather="edit"></span>Edit</a>
     <form action="/dashboard/products/{{ $produk->slug }}" method="post" class="d-inline">
     @method('delete')
@@ -46,7 +46,7 @@
                     <h5 class="sizes mt-5">Brand: {{ $produk->merk}}</h5>
                     <p class="product-description">{!! $produk->deskripsi !!}</p>
                     <h4 class="price">Rp <span> {{ $produk->harga}}</span></h4>
-                    
+
                     <div class="row">
                         <div class="col-md-3">
                             <p>Select Quantity :</p>
@@ -59,7 +59,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="link text-center">
                         {{-- <a href = "/produk/{{ $produk->slug }}" style=" background-color: #e5345b;" class = "text-white border-0 btn btn-primary mt-4">Add to Cart</a> --}}
                         <div style="float:right;;" class="py-5 mt-5 ">
