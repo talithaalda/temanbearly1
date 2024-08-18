@@ -4,12 +4,9 @@
 <!-- bootstrap css -->
 <link rel = "stylesheet" href = {{ asset("bootstrap-5.0.2-dist/css/bootstrap.min.css") }}>
 <!-- custom css -->
-<link href="{{ asset('css/main.css') }}" rel="stylesheet">
-<link href="{{ asset('css/cart.css') }}" rel="stylesheet">
-<link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
-<link href="{{ asset('css/main.dashboard.css') }}" rel="stylesheet">
-<link href="{{ asset('css/trix.css') }}" rel="stylesheet">
 
+<link href = {{ asset("/css/main.css") }} rel = "stylesheet" >
+<link rel="stylesheet" href="/js/script.js">
     <nav class = "navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top ">
     <div class = "container">
         <a class = "navbar-brand" href="/">
