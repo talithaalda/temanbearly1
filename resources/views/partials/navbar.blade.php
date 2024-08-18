@@ -4,16 +4,19 @@
 <!-- bootstrap css -->
 <link rel = "stylesheet" href = {{ asset("bootstrap-5.0.2-dist/css/bootstrap.min.css") }}>
 <!-- custom css -->
-
 <link href = {{ asset("/css/main.css") }} rel = "stylesheet" >
-<link rel="stylesheet" href="/js/script.js">
+<link href = {{ asset("/css/cart.css") }} rel = "stylesheet" >
+<link href = {{ asset("/css/dashboard.css") }} rel = "stylesheet" >
+<link href = {{ asset("/css/main.dashboard.css") }} rel = "stylesheet" >
+<link href = {{ asset("/css/trix.css") }} rel = "stylesheet" >
+
     <nav class = "navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top ">
     <div class = "container">
         <a class = "navbar-brand" href="/">
             <img src = {{ asset("img/LOGO4.png") }} alt = "site icon" width="70">
             <span class = "text-uppercase fw-lighter ms-2">Teman Bearly Beauty</span>
         </a>
-        
+
         <div class = "order-lg-2 nav-btns">
             @if(!Auth()->user())
             <a href="/login">
@@ -86,10 +89,10 @@
                 </li>
             </ul>
         </div>
-        
+
     </div>
-    
-    
-</nav>     
+
+
+</nav>
 
 
