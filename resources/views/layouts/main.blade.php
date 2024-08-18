@@ -12,12 +12,11 @@
     <title> Teman Bearly | {{ $title }}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
     <!-- custom js -->
-<link rel="stylesheet" href="{{ asset("js/script.js") }}">
-<link href = {{ asset("/css/main.css") }} rel = "stylesheet" >
-<link href = {{ asset("/css/cart.css") }} rel = "stylesheet" >
-<link href = {{ asset("/css/dashboard.css") }} rel = "stylesheet" >
-<link href = {{ asset("/css/main.dashboard.css") }} rel = "stylesheet" >
-<link href = {{ asset("/css/trix.css") }} rel = "stylesheet" >
+<link href="{{ asset('css/main.css') }}" rel="stylesheet">
+<link href="{{ asset('css/cart.css') }}" rel="stylesheet">
+<link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
+<link href="{{ asset('css/main.dashboard.css') }}" rel="stylesheet">
+<link href="{{ asset('css/trix.css') }}" rel="stylesheet">
   </head>
 
 
