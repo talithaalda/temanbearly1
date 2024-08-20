@@ -8,7 +8,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-<img src="public/img/temanbearly" alt="Alt Text" width="100%">
+<img src="public/img/temanbearly.png" alt="Alt Text" width="100%">
 
 ## Petunjuk Instalasi
 Tools yang perlu diinstal adalah PHP Version minimal 8.0, XAMPP, dan Composer.
