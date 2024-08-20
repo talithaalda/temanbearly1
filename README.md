@@ -1,5 +1,5 @@
 
-<img src="public/img/temanbearly.png" alt="Teman Bearly" width="70%">
+<img src="public/img/temanbearly.png" alt="Teman Bearly" width="100%">
 
 
 # Hi there, welcome to Teman Bearly 👋
