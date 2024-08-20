@@ -1,14 +1,11 @@
+<div style="text-align: center;">
+  <img src="public/img/temanbearly.png" alt="Teman Bearly" width="200" height="200">
+</div>
 
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Hi there, welcome to Teman Bearly 👋
+"Teman Bearly" E-Commerce Website is a platform that offers a wide selection of skincare and makeup products for purchase, along with payment options. Developed using the Laravel framework and supported by a database, this website provides a seamless and convenient online shopping experience.
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-<img src="public/img/temanbearly.png" align="center" alt="Alt Text" width="70%">
+Built on the Laravel framework, Teman Bearly ensures efficient management of various features and functionalities. The framework's modular architecture and elegant syntax simplify tasks such as routing, caching, and session management, resulting in smooth navigation and enhanced performance.
 
 ## Petunjuk Instalasi
 Tools yang perlu diinstal adalah PHP Version minimal 8.0, XAMPP, dan Composer.
