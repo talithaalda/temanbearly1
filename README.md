@@ -1,6 +1,6 @@
-<div style="text-align: center; width:"100%"">
-  <img src="public/img/temanbearly.png" alt="Teman Bearly" width="70%">
-</div>
+
+<img src="public/img/temanbearly.png" alt="Teman Bearly" width="70%">
+
 
 # Hi there, welcome to Teman Bearly 👋
 
