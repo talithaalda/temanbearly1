@@ -1,11 +1,10 @@
-<div style="text-align: center;">
-  <img src="public/img/temanbearly.png" alt="Teman Bearly" width="200" height="200">
+<div style="text-align: center; width:"100%"">
+  <img src="public/img/temanbearly.png" alt="Teman Bearly" width="70%">
 </div>
 
 # Hi there, welcome to Teman Bearly 👋
-"Teman Bearly" E-Commerce Website is a platform that offers a wide selection of skincare and makeup products for purchase, along with payment options. Developed using the Laravel framework and supported by a database, this website provides a seamless and convenient online shopping experience.
 
-Built on the Laravel framework, Teman Bearly ensures efficient management of various features and functionalities. The framework's modular architecture and elegant syntax simplify tasks such as routing, caching, and session management, resulting in smooth navigation and enhanced performance.
+Teman Bearly adalah situs web E-Commerce yang menawarkan berbagai produk perawatan kulit dan makeup dari toko dengan nama Teman Bearly. Dikembangkan menggunakan framework Laravel dengan tampilan yang user friendly, situs web ini menyediakan pengalaman berbelanja online yang mulus dan nyaman.
 
 ## Petunjuk Instalasi
 Tools yang perlu diinstal adalah PHP Version minimal 8.0, XAMPP, dan Composer.
