@@ -1,14 +1,10 @@
+<div style="text-align: center; width:"100%"">
+  <img src="public/img/temanbearly.png" alt="Teman Bearly" width="70%">
+</div>
 
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Hi there, welcome to Teman Bearly 👋
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-<img src="public/img/temanbearly.png" alt="Alt Text" width="100%">
+Teman Bearly adalah situs web E-Commerce yang menawarkan berbagai produk perawatan kulit dan makeup dari toko dengan nama Teman Bearly. Dikembangkan menggunakan framework Laravel dengan tampilan yang user friendly, situs web ini menyediakan pengalaman berbelanja online yang mulus dan nyaman.
 
 ## Petunjuk Instalasi
 Tools yang perlu diinstal adalah PHP Version minimal 8.0, XAMPP, dan Composer.
