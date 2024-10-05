@@ -66,7 +66,7 @@ class DashboardProdukController extends Controller
             $validatedData['harga'] = str_replace(".", "", $validatedData['harga']);
         }
         if ($request->file('image')) {
-            $validatedData['image'] = $request->file('image')->store('produk-image');
+            $validatedData['image'] = $request->file('image')->store('produk-image', 'public');
         }
         produk::create($validatedData);
         return redirect("/dashboard/products/")->with('success', 'Product has been created');
@@ -119,7 +119,7 @@ class DashboardProdukController extends Controller
             if ($request->oldImage) {
                 Storage::delete($request->oldImage);
             }
-            $validatedData['image'] = $request->file('image')->store('produk-image');
+            $validatedData['image'] = $request->file('image')->store('produk-image', 'public');
         }
         produk::where('id', $id)->update($validatedData);
         return redirect("/dashboard/products/$request->slug/edit")->with('success', 'Product has been updated');

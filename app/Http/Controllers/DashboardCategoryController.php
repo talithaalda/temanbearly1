@@ -16,8 +16,8 @@ class DashboardCategoryController extends Controller
      */
     public function index()
     {
-        return view('dashboard.category.index',[
-            "category"=>category::all()
+        return view('dashboard.category.index', [
+            "category" => category::all()
         ]);
     }
 
@@ -42,14 +42,14 @@ class DashboardCategoryController extends Controller
         $validatedData = $request->validate([
             'namakategori' => 'required|max:255',
             'slug' => 'required',
-            'image'=>'image'
-            
+            'image' => 'image'
+
         ]);
-        if($request->file('image')){
-            $validatedData['image']=$request->file('image')->store('category-image');
+        if ($request->file('image')) {
+            $validatedData['image'] = $request->file('image')->store('category-image', 'public');
         }
         category::create($validatedData);
-        return redirect("/dashboard/category/")->with('success','Category has been created');
+        return redirect("/dashboard/category/")->with('success', 'Category has been created');
     }
 
     /**
@@ -60,7 +60,7 @@ class DashboardCategoryController extends Controller
      */
     public function show(category $category)
     {
-        return view('dashboard.category.show',[
+        return view('dashboard.category.show', [
             "kategori" => $category,
             "produk" => produk::all()
         ]);
@@ -74,7 +74,7 @@ class DashboardCategoryController extends Controller
      */
     public function edit(category $category)
     {
-        return view('dashboard.category.edit',[
+        return view('dashboard.category.edit', [
             "kategori" => $category,
             "produk" => produk::all()
         ]);
@@ -87,24 +87,22 @@ class DashboardCategoryController extends Controller
      * @param  \App\Models\category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,$id)
+    public function update(Request $request, $id)
     {
         $validatedData = $request->validate([
             'namakategori' => 'required|max:255',
             'slug' => 'required',
             'image' => 'image'
-            
+
         ]);
-        if($request->file('image')){
-            if($request->oldImage){
+        if ($request->file('image')) {
+            if ($request->oldImage) {
                 Storage::delete($request->oldImage);
             }
-            $validatedData['image']=$request->file('image')->store('category-image');
+            $validatedData['image'] = $request->file('image')->store('category-image', 'public');
         }
         category::where('id', $id)->update($validatedData);
-        return redirect("/dashboard/category/")->with('success','Product has been updated');
-
-
+        return redirect("/dashboard/category/")->with('success', 'Product has been updated');
     }
 
     /**
@@ -115,12 +113,10 @@ class DashboardCategoryController extends Controller
      */
     public function destroy(category $category)
     {
-        if($category->image){
+        if ($category->image) {
             Storage::delete($category->image);
         }
         category::destroy($category->id);
-        return redirect("/dashboard/category")->with('success','Category has been delete');
+        return redirect("/dashboard/category")->with('success', 'Category has been delete');
     }
-    
-    
 }
