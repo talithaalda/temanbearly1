@@ -31,7 +31,7 @@ Make sure you have the following tools installed:
      ```
    - Navigate into the project directory:
      ```bash
-     cd OBE-SI
+     cd temanbearly1
      ```
 
 4. **Update Dependencies**:
