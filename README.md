@@ -27,7 +27,7 @@ Make sure you have the following tools installed:
 3. **Clone the Repository**:
    - Open a terminal in the desired folder and run the following command to clone the project:
      ```bash
-     git clone https://github.com/AirlanggaOBE/OBE-SI.git
+     git clone https://github.com/talithaalda/temanbearly1.git
      ```
    - Navigate into the project directory:
      ```bash
