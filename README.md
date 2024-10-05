@@ -86,6 +86,7 @@ Make sure you have the following tools installed:
    - Go to `http://127.0.0.1:8000/admin`.
    
 2. **Admin Login**:
+   - Go to /admin
    - Use the following credentials to log in:
      - **Email**: `admin@gmail.com`
      - **Password**: `admin`
